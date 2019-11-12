@@ -1,0 +1,14 @@
+wolf - humans
+deer - humans, wolves, lions, bears, jaugar
+cow -  wolf, tiger, lion, bear
+lion - humans
+horse - humans, lions, wolves, coyotes
+dog - birds, coyote
+tiger  - bear - crocodile, hyena, leopard
+hippopotamus - Lions, Hyenas, Crocodiles
+elephant - lion, tiger, hyenas
+chimpanzee - leopard, eagles
+rhinoceros - tifer, crocodile, hyena
+rabbit - dog, cat, fox, hawk, owl
+buffalo - wolf, lion, bear
+zebra - lion, hyena, leopard
