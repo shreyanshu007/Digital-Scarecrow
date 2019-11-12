@@ -15,40 +15,35 @@ animal = './../dataset/animals'
 Tcount = 0
 Fcount = 0
 
-tempList = []
 
-for folder in os.listdir(bird):
-	count = 0
-	for file in os.listdir(bird + slash + folder):
-		label = resModel(bird + slash + folder + slash + file)
+# for folder in os.listdir(bird):
+# 	count = 0
+# 	for file in os.listdir(bird + slash + folder):
+# 		label = resModel(bird + slash + folder + slash + file)
 
-		if label not in tempList:
-			tempList.append(label)
-				
-		print(len(tempList))
 
-		# if label == folder:
-		# 	Tcount += 1
-		# else:
-		# 	Fcount += 1
-		# 	print(label)
-		# 	print(folder)
-		# 	print(file)
-		# 	print('\n')
-		# count += 1
-	# break
+# 		if label == folder:
+# 			Tcount += 1
+# 		else:
+# 			Fcount += 1
+# 			print(label)
+# 			print(folder)
+# 			print(file)
+# 			print('\n')
+# 		count += 1
+# 	break
 
 
 # print(Tcount)
 # print(Fcount)
 
 
-# print(resModel('./../dataset/test/dog.jpeg'))
-# print(vggModel('./../dataset/test/dog.jpeg'))
+print(resModel('./../dataset/test/dog.jpeg'))
+print(vggModel('./../dataset/test/dog.jpeg'))
 
 
-print(len(tempList))
+# print(len(tempList))
 
-with open('your_file.txt', 'w') as f:
-    for item in tempList:
-        f.write("%s\n" % item)
+# with open('your_file.txt', 'w') as f:
+#     for item in tempList:
+#         f.write("%s\n" % item)
