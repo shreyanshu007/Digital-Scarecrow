@@ -49,7 +49,53 @@ def getClass(imagePath):
 	return 'false'
 
 
+def testImage():
+
+	TP = 0
+	FP = 0
+	TN = 0
+	FN = 0
+
+	for folder in os.listdir(animal):
+		count = 0
+		for file in os.listdir(animal + slash + folder):
+			if count > 5:
+				break
+			if getClass(animal + slash + folder + slash + file) == folder:
+				TP += 1
+			else:
+				FN += 1
+			count += 1
+
+	for folder in os.listdir(bird):
+		count = 0
+		for file in os.listdir(bird + slash + folder):
+			if count > 2:
+				break
+			if getClass(bird + slash + folder + slash + file) == 'bird':
+				TP += 1
+			else:
+				FN += 1
+			count += 1
+
+	for folder in os.listdir(farm):
+		if getClass(farm + slash + file) == 'false':
+			TN += 1
+		else:
+			FP += 1
+			
+
+	print('\nTP')
+	print(TP)
+	print('\nTN')
+	print(TN)
+	print('\nFP')
+	print(FP)
+	print('\nFN')
+	print(FN)
 
 
-# print(getClass(farm + slash + '1.jpeg'))
-# print(getClass(test + slash + 'dog.jpeg')
+
+
+testImage()
+
