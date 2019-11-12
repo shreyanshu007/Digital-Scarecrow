@@ -24,8 +24,8 @@ def resModel(image_path):
 	# print(label[0])
 
 	# retrieve the most likely result, e.g. highest probability
-	label = label[0][0]
+	# label = label[0][0]
 
 	# print the classification
 	# print('%s (%.2f%%)' % (label[1], label[2]*100))
-	return label[1]
+	return label[0]
