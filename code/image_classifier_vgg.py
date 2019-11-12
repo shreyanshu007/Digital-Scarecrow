@@ -1,6 +1,4 @@
-# Image Classifier
-
-import os
+# Image Classifier VGG16
 
 from keras.applications.vgg16 import VGG16
 from keras.utils.vis_utils import plot_model
@@ -11,10 +9,10 @@ from keras.applications.vgg16 import decode_predictions
 
 
 # load vgg16 model
-vggmodel = VGG16()
+vgg = VGG16()
 
 
-def predictLabel(image_path):
+def vggModel(image_path):
 
 	# load an image from file
 	image = load_img(image_path, target_size=(224, 224))
@@ -29,7 +27,7 @@ def predictLabel(image_path):
 	image = preprocess_input(image)
 
 	# predict the probability across all output classes
-	yhat = vggmodel.predict(image)
+	yhat = vgg.predict(image)
 
 	# convert the probabilities to class labels
 	label = decode_predictions(yhat)
@@ -43,31 +41,3 @@ def predictLabel(image_path):
 
 
 
-# -------------------------
-
-
-# predictLabel('./../dataset/test/pig.jpg')
-
-slash = '/'
-bird = './../dataset/birds'
-animal = './../dataset/animals'
-
-Tcount = 0
-Fcount = 0
-
-for folder in os.listdir(animal):
-	for file in os.listdir(animal + slash + folder):
-		label = predictLabel(animal + slash + folder + slash + file)
-		if label == folder:
-			Tcount += 1
-		else:
-			Fcount += 1
-			print(label)
-			print(folder)
-			print(file)
-			print('\n\n')
-	# break
-
-
-print(Tcount)
-print(Fcount)
