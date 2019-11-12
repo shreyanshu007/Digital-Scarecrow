@@ -78,12 +78,12 @@ def testImage():
 				FN += 1
 			count += 1
 
-	for folder in os.listdir(farm):
+	for file in os.listdir(farm):
 		if getClass(farm + slash + file) == 'false':
 			TN += 1
 		else:
 			FP += 1
-			
+
 
 	print('\nTP')
 	print(TP)
@@ -99,3 +99,18 @@ def testImage():
 
 testImage()
 
+
+
+'''
+TP
+627
+
+TN
+13
+
+FP
+7
+
+FN
+63
+'''
