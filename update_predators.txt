@@ -1,0 +1,15 @@
+buffalo-wolf,lion,bear
+chimpanzee-leopard,eagle
+cow-wolf,tiger,lion,bear
+deer-human,wolf,lion,bear,jaugar
+elephant-lion,tiger,hyena
+fox-coyote,wolf,bear,human
+horse-human,lion,wolf,coyote
+leopard-hyena,cheeta,lion,tiger
+lion-human
+pig-wolf,dog,coyote,cougar
+rhinoceros-tiger,crocodile,hyena
+sheep-coyote,wolf,fox,bear,dog,cougar
+tiger-bear,crocodile,hyena,leopard
+wolf-human
+zebra-lion,hyena,leopard

@@ -114,3 +114,10 @@ FP
 FN
 63
 '''
+
+# Accuracy = 90.14
+
+# Precision = 98.95
+
+# Recall = 90.86
+
