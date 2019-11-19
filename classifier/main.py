@@ -36,10 +36,22 @@ def getPredator(predator_list):
 		print('Perdator Sound will be -> ' + predator_list[0])
 
 
+farm_image = './../dataset/test/temp/13.jpeg'
+cow_image = './../dataset/test/temp/cow_10016.jpg'
+deer_image = './../dataset/test/temp/deer_10014.jpg'
+buffalo_image = './../dataset/test/temp/buffalo_10016.jpg'
 
-def printPredator():
-	image_label = image.getClass('./../dataset/test/temp/13.jpeg')
-	audio_label = sound.getClass('./../sound_classifier/cow_test.wav')
+
+cow_audio = './../sound_classifier/cow_test.wav'
+deer_audio = './../sound_classifier/sikabuck3.wav'
+wolf_audio = './../sound_classifier/redwolf.wav'
+
+
+
+
+def printPredator(image_path, audio_path):
+	image_label = image.getClass(image_path)
+	audio_label = sound.getClass(audio_path)
 	print('\n\n')
 	print('Animal detected by image model -> ' + image_label)
 	print('Animal detected by audio model -> ' + audio_label)
@@ -47,4 +59,4 @@ def printPredator():
 
 
 
-printPredator()
+printPredator(farm_image, deer_image)
