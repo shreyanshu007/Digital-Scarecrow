@@ -8,7 +8,7 @@ from os import listdir
 from os.path import isfile, join
 
 
-filePath = '22475.wav'
+# filePath = 'cow_test.wav'
 
 
 d = '.'
@@ -34,26 +34,28 @@ def extract_features(file_name):
     return mfccsscaled
 
 
+def getClass(filePath):
+    data = extract_features(filePath)
+    features = []
+    features.append([data])
+    featuresdf = pd.DataFrame(features, columns=['feature'])
 
-data = extract_features(filePath)
-features = []
-features.append([data])
-featuresdf = pd.DataFrame(features, columns=['feature'])
 
+    from sklearn.preprocessing import LabelEncoder
 
-from sklearn.preprocessing import LabelEncoder
+    # Convert features and corresponding classification labels into numpy arrays
+    X = np.array(featuresdf.feature.tolist())
 
-# Convert features and corresponding classification labels into numpy arrays
-X = np.array(featuresdf.feature.tolist())
+    from sklearn.externals import joblib 
 
-from sklearn.externals import joblib 
+    # Load the model from the file 
+    svm_from_joblib = joblib.load('trained_data.pkl')  
+      
+    # Use the loaded model to make predictions 
+    predicted_class = svm_from_joblib.predict(X)
 
-# Load the model from the file 
-svm_from_joblib = joblib.load('trained_data.pkl')  
-  
-# Use the loaded model to make predictions 
-predicted_class = svm_from_joblib.predict(X)
-
-# model predict  
-print(predicted_class)
-print ( RevDict[predicted_class[0]])
+    # model predict  
+    # print(predicted_class)
+    # print ( RevDict[predicted_class[0]])
+    
+    return RevDict[predicted_class[0]]

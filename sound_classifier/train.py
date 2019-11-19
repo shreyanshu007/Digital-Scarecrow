@@ -74,7 +74,7 @@ x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_
 
 # training a linear SVM classifier 
 from sklearn.svm import SVC 
-svm_model_linear = SVC(kernel = 'linear', C = 1).fit(x_train, y_train) 
+svm_model_linear = SVC(kernel = 'linear', C = 1, probability = True).fit(x_train, y_train) 
 svm_predictions = svm_model_linear.predict(x_test) 
   
 # model accuracy for X_test   

@@ -1,4 +1,5 @@
-
+import image_classifier/image
+import sound_classifier/sound
 
 
 predator_dict = {}
@@ -33,3 +34,5 @@ def getPredator(predator_list):
 	else:
 		print(predator_list[0])
 
+
+# print()
