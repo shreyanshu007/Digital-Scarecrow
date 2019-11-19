@@ -1,7 +1,8 @@
 import image
 import sound
 
-
+import sounddevice as sd
+import soundfile as sf
 
 predator_dict = {}
 
@@ -34,11 +35,14 @@ def getPredator(predator_list):
 		print('Nothing Unusual')
 	else:
 		print('Perdator Sound will be -> ' + predator_list[0])
+		data, fs = sf.read('./../predator_sounds/' + predator_list[0] + '.wav', dtype = 'float32')
+		sd.play(data, fs)
+		status = sd.wait()
 
 
 farm_image = './../dataset/test/temp/13.jpeg'
 cow_image = './../dataset/test/temp/cow_10016.jpg'
-deer_image = './../dataset/test/temp/deer_10014.jpg'
+deer_image = './../dataset/test/temp/deer_10021.jpg'
 buffalo_image = './../dataset/test/temp/buffalo_10016.jpg'
 
 
@@ -59,4 +63,7 @@ def printPredator(image_path, audio_path):
 
 
 
-printPredator(farm_image, deer_image)
+printPredator(farm_image, cow_audio)
+printPredator(farm_image, deer_audio)
+# printPredator(deer_image, deer_audio)
+
