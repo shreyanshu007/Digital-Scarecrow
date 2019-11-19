@@ -95,9 +95,16 @@ def testImage():
 	print(FN)
 
 
+def temptemp():
+	for file in os.listdir(test):
+		print("------------------------\n----------------")
+		print(getClass(test + slash + file))
+		print(file)
 
 
-testImage()
+
+# testImage()
+temptemp()
 
 
 
