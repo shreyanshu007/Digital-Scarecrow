@@ -1,0 +1,12 @@
+giant_schnauzer
+standard_poodle
+boxer
+Bouvier_des_Flandres
+komondor
+basset
+Great_Dane
+Scottish_deerhound
+Weimaraner
+Irish_terrier
+dhole
+Greater_Swiss_Mountain_dog

@@ -1,10 +1,11 @@
-import image_classifier/image
-import sound_classifier/sound
+import image
+import sound
+
 
 
 predator_dict = {}
 
-file = open('update_predators.txt', "r")
+file = open('./../update_predators.txt', "r")
 
 for line in file.read().split('\n'):
 	predator_dict[line.split('-')[0]] = line.split('-')[1].split(',')
@@ -32,7 +33,18 @@ def getPredator(predator_list):
 	if len(predator_list) == 0:
 		print('Nothing Unusual')
 	else:
-		print(predator_list[0])
+		print('Perdator Sound will be -> ' + predator_list[0])
 
 
-# print()
+
+def printPredator():
+	image_label = image.getClass('./../dataset/test/temp/13.jpeg')
+	audio_label = sound.getClass('./../sound_classifier/cow_test.wav')
+	print('\n\n')
+	print('Animal detected by image model -> ' + image_label)
+	print('Animal detected by audio model -> ' + audio_label)
+	getPredator(getPredatorList(image_label, audio_label))
+
+
+
+printPredator()

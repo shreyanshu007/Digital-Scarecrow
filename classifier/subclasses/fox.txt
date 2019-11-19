@@ -1,0 +1,3 @@
+kit_fox
+red_fox
+grey_fox
